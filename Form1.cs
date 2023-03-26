@@ -30,12 +30,12 @@ namespace CompGraphic
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = this.CreateGraphics();
-            g.Clear(Color.LightSlateGray);
+            g.Clear(Color.LightSlateGray);// background color
             Run(4);//number of iterations
         }
         private void Run(int countcycle)
         {
-            Circle circle = new Circle(500, 500, 150);
+            Circle circle = new Circle(500, 500, 150);// size first circle
             int PWidth = 10;// Line thickness 
             List<Circle> iteration = new List<Circle>();
             List<Circle> temp = new List<Circle>();
@@ -74,10 +74,10 @@ namespace CompGraphic
             }; Random random = new Random();
             Color randomColor = colors[random.Next(colors.Count)];
 
-            int centerX = x; // x coordinate of center point
-            int centerY = y; // y coordinate of center point
-            int bigRadius = radius; // radius of the center circle
-            int smallRadius = radius/2; // radius of the smaller circles
+            int centerX = x; 
+            int centerY = y; 
+            int bigRadius = radius; 
+            int smallRadius = radius/2;
             
             Graphics g = this.CreateGraphics();
             Pen p = new Pen(randomColor,PWidth);
